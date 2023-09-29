@@ -9,22 +9,26 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-<!--nav bar-->
-  <nav id="navbar">
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#brands">Brands</a></li>
-        <li><a href="#partners">Partners</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-  </nav>
-<!--End nav bar-->
-
 <!--HOME-->
- <section id="home"> 
- <button 
+ <section id="home">
+  <header>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+  <section class="banner"></section>
+    <script type="text/javascript">
+      window.addEventListener("scroll",function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    </script>
+  <button 
     class="home-btn"
     onclick="location.href='#contact'">CONTACT US NOW
   </button>
@@ -59,12 +63,12 @@
 <!-- Services-->
 <section id="services">
   <div class="container">
-      <div class="item item-1">1</div>
-      <div class="item item-2">2</div>
-      <div class="item item-3">3</div>
-      <div class="item item-4">4</div>
-      <div class="item item-3">5</div>
-      <div class="item item-4">6</div>
+      <div class="item item-1">knitting</div>
+      <div class="item item-2">printing</div>
+      <div class="item item-3">embroidery</div>
+      <div class="item item-4">dyeing</div>
+      <div class="item item-5">finishing</div>
+      <div class="item item-6">washing</div>
     </div>
 </section>
 <!--end of services-->
@@ -74,14 +78,18 @@
       <h1 class="brands__title">Brands</h1>
        <div class="brands-containers">
           <div class="brands-details-container">
-            <img
+            <div class="front-brand">
+              <img
                 src="./img/Brand Logos/777 Garments Logos.png"
                 alt="777 Garments Logo"
                 class="brand-logo"
             />
-            <h2 class="brand-name">777 Garments</h2>
-            <p class="brand__text__p2">Company description</p>
-            <p class="brand__text__p3">Facebook</p>
+            </div>
+            <div class="back-brand">
+              <h2 class="brand-name">777 Garments</h2>
+              <p class="brand__text__p2">Company description</p>
+              <p class="brand__text__p3">Facebook</p>
+            </div>
           </div>
           <div class="brands-details-container">
             <img
