@@ -28,10 +28,12 @@
       header.classList.toggle("sticky", window.scrollY > 0);
     })
     </script>
-  <button 
-    class="home-btn"
-    onclick="location.href='#contact'">CONTACT US NOW
-  </button>
+  <div class="home-btn-container">
+    <button 
+      class="home-btn"
+      onclick="location.href='#contact'">CONTACT US NOW
+    </button>
+</div>
  </section>
 <!--END of HOME-->
 
@@ -62,7 +64,7 @@
 
 <!-- Services-->
 <section id="services">
-  <div class="container">
+  <div class="service-container">
       <div class="item item-1">knitting</div>
       <div class="item item-2">printing</div>
       <div class="item item-3">embroidery</div>
@@ -76,40 +78,56 @@
     <section id="brands">
       <p class="brands__text__p1">Our</p>
       <h1 class="brands__title">Brands</h1>
-       <div class="brands-containers">
-          <div class="brands-details-container">
-            <div class="front-brand">
-              <img
-                src="./img/Brand Logos/777 Garments Logos.png"
-                alt="777 Garments Logo"
-                class="brand-logo"
-            />
+       <div class="brands-row">
+        <div class="brands-col">
+          <div class="brands-card">
+            <div class="brands-inner-box">
+              <div class="brands-front front-1"></div>
+              <div class="brands-back">
+                <p class="brands__text__p2">777 GARMENTS</p>
+                <div class="brands-socials">
+                  <a href="https://www.facebook.com/DucksUnlimitedPh" target="_blank"><img src="img/icons/facebook-icon-white-png.png"></a>
+                  <a href="https://www.instagram.com/ducks.ph/" target="_blank"><img src="img/icons/new-Instagram-logo-white-glyph.png"></a></br>
+                  <a href="reneejazminang@gmail.com?subject=Mail from our Website">sample@gmail.com</a></br>
+                  <a href="tel:09177988286 ">09177988286</a>
+                </div>
+              </div>
             </div>
-            <div class="back-brand">
-              <h2 class="brand-name">777 Garments</h2>
-              <p class="brand__text__p2">Company description</p>
-              <p class="brand__text__p3">Facebook</p>
+          </div>
+        </div>
+        <div class="brands-col">
+          <div class="brands-card">
+            <div class="brands-inner-box">
+              <div class="brands-front front-2"></div>
+              <div class="brands-back">
+                <p class="brands__text__p2">DUCKS UNLIMITED</p>
+                <div class="brands-socials">
+                  <a href="https://www.facebook.com/DucksUnlimitedPh" target="_blank"><img src="img/icons/facebook-icon-white-png.png"></a>
+                  <a href="https://www.instagram.com/ducks.ph/" target="_blank"><img src="img/icons/new-Instagram-logo-white-glyph.png"></a></br>
+                  <a href="reneejazminang@gmail.com?subject=Mail from our Website">sample@gmail.com</a></br>
+                  <a href="tel:09177988286 ">09177988286</a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="brands-details-container">
-            <img
-                src="./img/Brand Logos/DU Logo.png"
-                alt="Ducks Unlimited Logo"
-                class="brand-logo"
-             /> 
-            <h2 class="brand-name">Duck Unlimited</h2>
-            <p class="brand__text__p2">Company description</p>
+        </div>
+        <div class="brands-col">
+          <div class="brands-card">
+            <div class="brands-inner-box">
+              <div class="brands-front front-3"></div>
+              <div class="brands-back">
+                <p class="brands__text__p2">999 PREMIUM GARMENTS</p>
+                <div class="brands-socials">
+                  <a href="https://www.facebook.com/DucksUnlimitedPh" target="_blank"><img src="img/icons/facebook-icon-white-png.png"></a>
+                  <a href="https://www.instagram.com/ducks.ph/" target="_blank"><img src="img/icons/new-Instagram-logo-white-glyph.png"></a></br>
+                  <a href="reneejazminang@gmail.com?subject=Mail from our Website">sample@gmail.com</a></br>
+                  <a href="tel:09177988286 ">09177988286</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="brands-details-container">
-            <img
-                src="./img/Brand Logos/999 Garments Logos.png"
-                alt="999 Garments Logo"
-                class="brand-logo"
-            />
-            <h2 class="brand-name">Premium 999 Garments</h2>
-            <p class="brand__text__p2">Company description</p>
-          </div>
-      </div>
+        </div>
+       </div>
     </section>
 <!--End of Brands-->
 
@@ -119,14 +137,6 @@
       <h1 class="partners__title">Partners</h1>
         <div class="partners-containers">
           <div class="partners-details-container">
-              <h2 class="partner__text__p2">Local Partners</h2>
-              <img
-                src="./img/partner Logos/local logo.jpg"
-                alt="logo 1"
-                class="partner-logo"
-              /> 
-          </div>
-          <div class="partners-details-container">
               <h2 class="partner__text__p2">International Partners</h2>
               <img
                 src="./img/partner Logos/international logo.jpg"
@@ -134,6 +144,14 @@
                 class="partner-logo"
               />
           </div>
+          <div class="partners-details-container">
+            <h2 class="partner__text__p2">Local Partners</h2>
+            <img
+              src="./img/partner Logos/local logo.jpg"
+              alt="logo 1"
+              class="partner-logo"
+            /> 
+        </div>
         </div>
       </div>
     </section>
@@ -144,40 +162,67 @@
       <h1 class="team__title">Team</h1>
         <div class="team-containers">
           <div class="team-details-container">
-            <div class="front">
               <img
-              src="./img/Ang, Renee Jazmin-5 (1).jpg"
-              alt="Rosemarie Ang Picture"
+              src="./img/qr code.png"
+              alt="We Chat QR Code"
               class="team-img"
               />
-          
               <h2 class="team-sub-title project-title">Rosemarie Ang</h2> 
-              <p class="team__text__p2">CEO</p>
-              <p class="team__text__p3">Socials</p>
-            </div>
-            <div class="back">
-              <img
-              src="./img/calling card/ROSEMARIE.jpg"
-              alt="Rosemarie Ang Picture"
-              class="calling-img"
-              />
-            </div>
+              <div class="team-socials">
+                <a href="reneejazminang@gmail.com?subject=Mail from our Website">sample@gmail.com</a></br>
+                <a href="tel:09177988286 ">09177988286</a>
+              </div>
           </div>
+          <div class="team-details-container">
+            <img
+            src="./img/qr code.png"
+            alt="We Chat QR Code"
+            class="team-img"
+            />
+            <h2 class="team-sub-title project-title">Jethro Ang</h2> 
+            <div class="team-socials">
+              <a href="reneejazminang@gmail.com?subject=Mail from our Website">sample@gmail.com</a></br>
+              <a href="tel:09177988286 ">09177988286</a>
+            </div>
         </div>
+        <div class="team-details-container">
+          <img
+          src="./img/qr code.png"
+          alt="We Chat QR Code"
+          class="team-img"
+          />
+          <h2 class="team-sub-title project-title">Regina Ang</h2> 
+          <div class="team-socials">
+            <a href="reneejazminang@gmail.com?subject=Mail from our Website">sample@gmail.com</a></br>
+            <a href="tel:09177988286 ">09177988286</a>
+          </div>
       </div>
+      <div class="team-details-container">
+        <img
+        src="./img/qr code.png"
+        alt="We Chat QR Code"
+        class="team-img"
+        />
+        <h2 class="team-sub-title project-title">Jazmin Ang</h2> 
+        <div class="team-socials">
+          <a href="reneejazminang@gmail.com?subject=Mail from our Website">sample@gmail.com</a></br>
+          <a href="tel:09177988286 ">09177988286</a>
+        </div>
+    </div>
+       </div>
     </section>
 
 <!--Contact-->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Us</h1>
-      
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <p>Email: cmt@gmail.com</p>
-          <p>Moblie: 09177988286</p>
-          <p>Landline: 028213123</p>
-          <p>Adress: 158, Valenzula City</p>
+      <p class="contact__text__p1">Get in Touch</p>
+      <h1 class="contact__title">Contact Us</h1>
+      <div class="contact-container">
+        <div class="google-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7717.97799054683!2d120.99493142473104!3d14.713214232501588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b16809808c75%3A0x187ba49013b68d9!2sCmt%20Apparel%20Philippines%2C%20Inc.!5e0!3m2!1sen!2sph!4v1696233401700!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-details">
+          <a href="reneejazminang@gmail.com">Email Address:sample@gmail.com</a></br>
+          <a href="tel:09177988286 ">Moblie Number: 09177988286</a>
         </div>
       </div>
     </section>
@@ -185,19 +230,7 @@
 
 <!--Footer-->
     <footer>
-      <div id="footernavbar">
-        <div class="nav-links-container">
-          <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#brands">Brands</a></li>
-          <li><a href="#partners">Partners</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <p>Copyright &#169; 2023 CMT. All Rights Reserved.</p>
+      <p class="footer-text">Copyright &#169; 2023 CMT. All Rights Reserved.</p>
     </footer>
 <!--End of Footer-->
  <script src="script.js"></script>

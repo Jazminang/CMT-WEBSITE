@@ -49,6 +49,7 @@ header.sticky{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 .nav-links li{
   position: relative;
@@ -63,6 +64,7 @@ header.sticky{
   text-decoration-color: rgb(205, 145, 15);
   font-weight: bold;
   transition: 0.6s;
+  text-transform: uppercase;
 }
 .nav-links li a:hover {
   color: rgb(205, 145, 15);
@@ -90,19 +92,21 @@ header.sticky .nav-links li a:hover{
 #home{
   position: relative;
 }
+
 .home-btn {
   border-radius: 1rem;
   border: rgba(53, 53, 53, 0) 0.1rem solid;
   background-color: rgb(230, 175, 25);
+  width: 15rem;
+  padding: 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 72vh;
   color: white;
   font-weight: bold;
   font-size: 15px;
-  padding: 1rem;
-  width: 15rem;
-  position: absolute;
-  align-self: center;
-  top: 72vh;
- 
 
 }
 .home-btn:hover {
@@ -125,6 +129,9 @@ header.sticky .nav-links li a:hover{
 .about-pic {
   height:auto;
   width: 500px;
+  justify-content: center;
+  align-items: center;
+  
 
 }
 .about-details-container {
@@ -164,7 +171,7 @@ header.sticky .nav-links li a:hover{
 
 
 /*services*/
-.container {
+.service-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -175,9 +182,12 @@ header.sticky .nav-links li a:hover{
   justify-content: center;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: bolder;
   letter-spacing: 10px;
-  text-shadow: 3px 3px #07390b;
+  text-shadow: 2px 2px 4px #000000;
+  background-position: center;
+  background-size: cover;
+  font-size: large;
 }
 
 .item-1 {
@@ -228,15 +238,13 @@ header.sticky .nav-links li a:hover{
   background-image:linear-gradient(
     rgba(205, 145, 15, 0.5),
     rgba(205, 145, 15, 0.5)
-  ), url(img/Service\ Icons/washing\ machine.jpeg);
+  ), url(img/Service\ Icons/dyeing\ machine.jpeg);
   height: 200px;
   width: 200x;
 }
 
 /* BRAND/TEAM SECTION */
-
 #brands {
-  position: relative;
   background-color: rgb(255, 255, 255);
   height: fit-content;
   
@@ -255,57 +263,94 @@ header.sticky .nav-links li a:hover{
   color: rgb(4, 65, 4);
   margin-top: 0;
 }
-
-.brands-containers{
-  display: grid;
-  grid-template-columns: 150px 150px 150px;
-  justify-content: space-around;
-  padding: 3rem;
+.brands-row {
+  width: 85%;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
 }
 
-.brands-details-container {
-  width: fit-content;
-  height: fit-content;
-  padding: 1rem;
-  margin: 3rem;
-  border-radius: 2rem;
-  background: rgb(255, 255, 255);
+.brands-col {
+  flex-basis: 100%;
+  overflow: hidden;
+}
+
+.brands-card {
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  perspective: 1000px;
+  cursor: pointer;
+  padding-bottom: 3rem;
+}
+
+.brands-inner-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  
+  border-radius: 10px;
+  transition: 1s;
+  transform-style: preserve-3d;
+  box-shadow:  0 3px 10px rgb(0 0 0 / 0.2);
+}
+.brands-front, .brands-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.brands-front {
+  background-position: center;
+  box-sizing: cover;
 }
 
-.brand-logo {
-  width: 15rem;
-  height: auto;
-  padding: 1rem;
-  margin-bottom: 0;
-  justify-content:center;
-}
-.brand-name {
-  color: black;
-  text-align: center;
+
+.brands-back {
+  background-color: #07390b;
+  transform: rotateX(180deg);
 }
 
-.brand__text__p2 {
-  text-align: center;
-  font-size: 15px;
-  color: rgb(0, 0, 0);
-  margin-top: 0;
+.front-1{
+  background-image: url(img/Brand\ Logos/777\ Garments\ Logos.png);
 }
 
-.brand__text__p3 {
-  text-align: center;
-  font-size: 15px;
-  color: rgb(0, 0, 0);
-  margin-top: 0;
-  margin-bottom: 2rem;
+.front-2{
+  background-image: url(img/Brand\ Logos/Ducks\ Logos.png);
+}
+.front-3{
+  background-image: url(img/Brand\ Logos/999\ Garments\ Logos.png);
+}
+
+.brands-card:hover .brands-inner-box{
+  transform: rotateX(-180deg);
+}
+
+.brands__text__p2 {
+  display: inline-block;
+  color:white;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+  margin-top: 100px;
+}
+
+.brands-socials img {
+  width: 30px;
+  margin: 10px 5px;
+}
+
+.brands-socials a {
+  color: white;
 }
 
 
 /* Partner SECTION */
 #partners {
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(224, 249, 228, 0.569);
   height: fit-content;
   
 }
@@ -328,6 +373,9 @@ header.sticky .nav-links li a:hover{
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 1rem;
+  padding-bottom: 3rem;
+  gap: 3rem;
+  
 }
 
 .partners-details-container {
@@ -338,6 +386,8 @@ header.sticky .nav-links li a:hover{
   background: rgb(255, 255, 255);
   color: black;
   text-align: center;
+  box-shadow:  0 3px 10px rgb(0 0 0 / 0.2);
+
 }
 
 .partner-logo {
@@ -352,7 +402,7 @@ header.sticky .nav-links li a:hover{
 
 #team {
   position: relative;
-  background-color: rgb(136, 182, 140);
+  background-color: rgb(255, 255, 255);
   height: fit-content;
   
 }
@@ -368,127 +418,103 @@ header.sticky .nav-links li a:hover{
   font-size: 40px;
   text-align: center;
   color: rgb(4, 65, 4);
-  margin-top: 0;
+  margin:0;
 }
 
 .team-containers{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-around;
-  padding: 3rem;
+  padding: 1rem;
   position: relative;
-  width: 250px;
-  height: 320px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 10rem;
 }
-
 .team-details-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease;
   padding: 1rem;
   margin: 3rem;
+  border-radius: 2rem;
+  background: rgb(165, 207, 161);
   justify-content: center;
   text-align: center;
+  box-shadow:  0 3px 10px rgb(0 0 0 / 0.2);
 }
-
-.team-details-container:hover {
-  transform: rotateY(180deg)
-}
-
-.front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background: rgb(172, 43, 43);
-  color:black
-}
-
-.back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background: rgb(179, 255, 0);
-  color:black;
-  transform:rotateY(180deg );
-}
-
-
 .team-img {
-  border-radius: 2rem;
-  width:100px;
-  height: auto;
-  padding-top: 3rem;
+  border-radius: 1rem;
+  width:150px;
+  height: 150px;
+  margin-top: 2rem;
 
 }
-
-.calling-img {
-  border-radius: 2rem;
-  width:100%;
-  height: auto;
-  padding-top: 3rem;
-
+.team-socials {
+  margin-bottom: 2rem;
 }
-
-.team__text__p2 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
+.team-socials a {
   color: rgb(0, 0, 0);
-}
-
-.team__text__p3 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  color: rgb(83, 83, 83);
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-  justify-content: center;
+  line-height: 1rem;
 }
 
 /* CONTACT */
-
 #contact {
-  display: flex;
-  background-color: rgb(68, 68, 121);
-  justify-content: center;
-  flex-direction: column;
-  height: 40vh;
+  background-color: rgb(255, 255, 255);
+  height: 75vh;
+  
+}
+.contact__text__p1 {
+  text-align: center;
+  color: rgb(4, 65, 4);
+  font-size: 20x;
+  padding-top: 5rem;
+  margin-bottom: 0;
+}
+
+.contact__title {
+  font-size: 40px;
+  text-align: center;
+  color: rgb(4, 65, 4);
+  margin:0;
+}
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+}
+.google-map {
+  grid-column: 1;
+  grid-row: 1;
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.google-map iframe {
+  height: 100%;
   width: 100%;
-}
+  left: 0;
+  top: 0;
+  position: absolute;
+  padding: 2rem;
 
-.contact-info-upper-container {
+}
+.contact-details {
   display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: left;
+  flex-direction:column;
+  padding: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+}
+.contact-details a {
+  color:rgb(0, 0, 0);
 }
 
-.contact-info-container {
-  display: table-column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
-}
 
-.contact-info-container p {
-  font-size: larger;
-  color: black;
-  font-weight:bold;
+/*footer*/
+#footer{
+  position: relative;
+}
+.footer-text {
+  color: #07390b;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
 }
