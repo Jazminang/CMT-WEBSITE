@@ -118,20 +118,20 @@ header.sticky .nav-links li a:hover{
 /* ABOUT SECTION */
 
 #about {
-  position: relative;
   background-color: rgb(255, 255, 255);
   height: fit-content;
 }
-
 .about-container{
   display: flex;
 }
 .about-pic {
   height:auto;
   width: 500px;
-  justify-content: center;
+  border-radius: 2rem;
+  margin: 2rem;
+  display: flex;
   align-items: center;
-  
+  justify-content: center;
 
 }
 .about-details-container {
@@ -148,15 +148,13 @@ header.sticky .nav-links li a:hover{
   display: flex;
   justify-content: left;
   margin-top: 5rem;
-  margin-left: 2rem;
 }
 .about__title {
   font-size: 40px;
   color: rgb(4, 65, 4);
   margin-top: 0;
-  justify-content: left;
-  margin-left: 2rem;
-
+  justify-content:left;
+  
 }
 .about__text-p2 {
   display: flex;
@@ -164,8 +162,11 @@ header.sticky .nav-links li a:hover{
   justify-content: left;
   flex-direction:column;
   color:black;
-  margin-left: 2rem;
-  margin-bottom: 3rem;
+  margin: 2rem;
+  margin-left: 0;
+  margin-top: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 
@@ -350,7 +351,7 @@ header.sticky .nav-links li a:hover{
 /* Partner SECTION */
 #partners {
   position: relative;
-  background-color: rgba(224, 249, 228, 0.569);
+  background-color: rgb(255, 255, 255);
   height: fit-content;
   
 }
