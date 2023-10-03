@@ -268,7 +268,7 @@ header.sticky .nav-links li a:hover{
   width: 85%;
   margin: auto;
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   align-items: center;
   justify-content: center;
 }
@@ -424,7 +424,7 @@ header.sticky .nav-links li a:hover{
 
 .team-containers{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: space-around;
   padding: 1rem;
   position: relative;
