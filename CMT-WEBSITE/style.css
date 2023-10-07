@@ -35,7 +35,7 @@ header{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 5px;
+  padding:5px ;
   z-index: 100000;
 }
 
@@ -43,6 +43,11 @@ header.sticky{
   padding-top: 5px;
   background-color: white;
 }
+
+nav img{
+  width: 100px;
+}
+
 
 .nav-links {
   position: relative;
@@ -56,63 +61,97 @@ header.sticky{
   list-style: none;
 }
 
-.nav-links li a {
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
   position: relative;
-  margin: 0 15px;
-  color: rgb(255, 255, 255);
+}
+
+.nav-links ul li a{
+  color: white;
+  font-size: 13px;
   text-decoration: none;
-  text-decoration-color: rgb(205, 145, 15);
-  font-weight: bold;
-  transition: 0.6s;
   text-transform: uppercase;
 }
-.nav-links li a:hover {
-  color: rgb(205, 145, 15);
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(205, 145, 15);
+.nav-links ul li::after{
+  content:'';
+  width: 0%;
+  height: 2px;
+  background:goldenrod;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+  font-weight: bold;
 }
 
 header.sticky .nav-links li a{
   color: black;
 }
-header.sticky .nav-links li a:hover{
-  color: rgb(19, 79, 9);
-  text-decoration: none; 
-}
-.banner {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-image: url(img/CMT\ Business\ Card.png);
-  background-size: cover;
-  background-position: center;
-}
+
+
+
+
 /* HOME SECTION */
 #home{
   position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(img/banner\ page.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.home-details img {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.home-text{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  width: 90%;
+}
+.home-text h1 {
+  color: goldenrod;
+  font-size: 40px;
+}
+.home-text h2 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
 }
 
 .home-btn {
-  border-radius: 1rem;
-  border: rgba(53, 53, 53, 0) 0.1rem solid;
-  background-color: rgb(230, 175, 25);
-  width: 15rem;
-  padding: 1rem;
+  display: inline-block;
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 72vh;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+  border: rgb(255, 255, 255) 1px solid;
+  background-color: transparent;
+  width: 15rem;
+  padding: 12px 34px;
   color: white;
-  font-weight: bold;
   font-size: 15px;
+  cursor: pointer;
 
 }
 .home-btn:hover {
   border: rgb(53, 53, 53) 0.1rem solid;
-  background-color: rgba(230, 175, 25, 0.61);
-  color: rgba(255, 255, 255, 0.61);
+  background-color: rgb(230, 175, 25);
+  color: rgb(255, 255, 255);
+  transition: 1s;
 }
 
 /* ABOUT SECTION */
@@ -434,10 +473,11 @@ header.sticky .nav-links li a:hover{
   padding: 1rem;
   margin: 3rem;
   border-radius: 2rem;
-  background: rgb(165, 207, 161);
+  background:#07390b;
   justify-content: center;
   text-align: center;
   box-shadow:  0 3px 10px rgb(0 0 0 / 0.2);
+  color:goldenrod;
 }
 .team-img {
   border-radius: 1rem;
@@ -450,7 +490,7 @@ header.sticky .nav-links li a:hover{
   margin-bottom: 2rem;
 }
 .team-socials a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   line-height: 1rem;
 }
 
