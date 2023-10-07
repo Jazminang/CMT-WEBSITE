@@ -63,9 +63,23 @@
     .home-text h1, h2 {
         font-size: 20px;
     }
+
+    /* ABOUT SECTION*/
     .about-container {
         flex-direction: column;
     }
+
+    .about-pic{
+        width: 300px;
+    }
+
+     /* SERVICE SECTION*/
+     .service-container {
+        position: relative;
+        display:grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+     }
     /* CONTACTS SECTION*/
     .contact-container {
         position: relative;
