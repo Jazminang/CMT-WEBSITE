@@ -1,0 +1,16 @@
+/*--- Sticky Nav---*/
+window.addEventListener("scroll",function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+  })
+
+/*--- Sticky Nav---*/
+
+/*--- Hamburger Nav---*/
+    var navLinks2 = document.getElementById("navLinks2");
+            function showMenu(){
+            navLinks2.style.right = "0";}
+            function hideMenu(){
+            navLinks2.style.right = "-200px";}
+/*--- Hamburger Nav---*/
+
