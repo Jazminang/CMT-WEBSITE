@@ -1,6 +1,6 @@
 
 /*---320px — 480px: Mobile devices---*/
-@media (min-width: 320px) and (max-width: 480px){
+@media (max-width: 480px){
 /* NAV BAR*/
 header {
     justify-content: right;

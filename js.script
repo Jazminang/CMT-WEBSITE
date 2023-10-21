@@ -5,15 +5,29 @@ window.addEventListener("scroll",function(){
   })
 
 /*--- Sticky Nav---*/
-
-/*--- Hamburger Nav---*/
-    var navLinks2 = document.getElementById("navLinks2");
-            function showMenu(){
-            navLinks2.style.right = "0";}
-            function hideMenu(){
-            navLinks2.style.right = "-200px";}
+  /*--- Hamburger Nav---*/
+  var navLinks2 = document.getElementById("navLinks2");
+  function showMenu(){
+    navLinks2.style.right = "0";}
+  function hideMenu(){
+    navLinks2.style.right = "-200px";}
 /*--- Hamburger Nav---*/
 
 /*--- Nav Keep---*/
-
+const nav = document.querySelector('.navbar')
+fetch('/navbar.html')
+.then(res=>res.text())
+.then(data=>{
+    nav.innerHTML=data
+})
 /*--- Nav Keep---*/
+
+/*--- footer Keep---*/
+const footer = document.querySelector('.footer')
+fetch('/footer.html')
+.then(res=>res.text())
+.then(data=>{
+    footer.innerHTML=data
+})
+
+/*--- footer Keep---*/

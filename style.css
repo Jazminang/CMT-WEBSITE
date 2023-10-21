@@ -60,6 +60,7 @@ header.sticky img{
   justify-content: center;
   align-items: center;
   padding: 0;
+  margin: 10px;
 }
 
 .nav-links2{
@@ -385,7 +386,7 @@ nav .gg-push-chevron-right {
   background-image: url(img/Brand\ Logos/999\ Garments\ Logos.png);
 }
 
-.brands-card:hover .brands-inner-box{
+.brands-card:hover .brands-inner-box, .brands-card:active{
   transform: rotateX(-180deg);
 }
 
@@ -515,7 +516,7 @@ nav .gg-push-chevron-right {
 
 /* CONTACT */
 #contact {
-  background-color:#07390b;
+  background-color:#0c3b1255;
   min-height: fit-content;
   padding: 40px 100px;
   padding-top: 0;
@@ -633,21 +634,4 @@ nav .gg-push-chevron-right {
 .map iframe{
   width: 100%;
   height: 100%;
-}
-
-
-
-
-
-/*footer*/
-#footer{
-  position: relative;
-}
-.footer-text {
-  color: #07390b;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
 }
