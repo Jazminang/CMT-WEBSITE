@@ -262,6 +262,13 @@ header {
     grid-template-rows: auto;
   }
 
+  .service2-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
   .item{
     font-size: large;
     letter-spacing: 10px;
@@ -293,6 +300,14 @@ header {
 
   .map iframe {
     min-height: 50vh;
+  }
+
+  /* pmv SECTION*/
+  .pmv-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
 /*---769px — 1024px: Small screens, laptops---*/

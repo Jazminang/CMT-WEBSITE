@@ -221,12 +221,12 @@ nav .gg-push-chevron-right {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  color:black;
+  color:#00381F;
   margin: 2rem;
-  margin-left: 0;
-  margin-top: 0;
   text-align: justify;
   text-justify: inter-word;
+  font-size: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -411,13 +411,13 @@ nav .gg-push-chevron-right {
 /* clients SECTION */
 #clients{
   position: relative;
-  background-color: rgba(10, 75, 8, 0.173);
+  background-color: #00381F;
   height: fit-content;
   
 }
 .clients__text__p1 {
   text-align: center;
-  color: rgb(4, 65, 4);
+  color: white;
   font-size: 20x;
   padding-top: 5rem;
   margin-bottom: 0;
@@ -426,28 +426,28 @@ nav .gg-push-chevron-right {
 .clients__title {
   font-size: 40px;
   text-align: center;
-  color: rgb(4, 65, 4);
+  color: white;
   margin-top: 0;
 }
 .clients-containers {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 3rem;
   padding: 1rem;
   padding-bottom: 3rem;
-  gap: 3rem;
+  gap: 4rem;
   
 }
 
 .clients-details-container {
   width: 400px;
   height: 400px;
-  padding: 1rem;
-  border-radius: 2rem;
+  padding: 2rem;
   background: rgb(255, 255, 255);
   color: black;
   text-align: center;
-  box-shadow:  0 3px 10px rgb(0 0 0 / 0.2);
+  
 }
 
 
@@ -516,7 +516,7 @@ nav .gg-push-chevron-right {
 
 /* CONTACT */
 #contact {
-  background-color:#0c3b1255;
+  background-color:#ffffff;
   min-height: fit-content;
   padding: 40px 100px;
   padding-top: 0;
@@ -524,7 +524,7 @@ nav .gg-push-chevron-right {
 }
 .contact__text__p1 {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color:#00381F;
   font-size: 20x;
   padding-top: 5rem;
   margin-bottom: 0;
@@ -533,7 +533,7 @@ nav .gg-push-chevron-right {
 .contact__title {
   font-size: 40px;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: #00381F;
   margin:0;
 }
 .form {
@@ -547,7 +547,7 @@ nav .gg-push-chevron-right {
 }
 .contact1 {
   padding: 40px;
-  background-color: white;
+  background-color: #00381F;
 }
 .contact-container {
   position: relative;
@@ -562,10 +562,15 @@ nav .gg-push-chevron-right {
 }
 
 .contact1 h3 {
-  color:#07390b;
+  color:white;
   font-weight: 500;
   font-size: 1.4em;
   margin-bottom: 10px;
+}
+
+.contact1 p, a {
+  color:white;
+  line-height: 2rem;
 }
 
 .formBox{
@@ -590,7 +595,7 @@ nav .gg-push-chevron-right {
 }
 
 .inputBox span {
-  color: #07390b;
+  color: white;
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: 500;
@@ -614,8 +619,8 @@ nav .gg-push-chevron-right {
 }
 
 .inputBox input[type="submit"]{
-  background: #07390b;
-  color: #fff;
+  background: white;
+  color: #00381F;
   border:none;
   font-size: 1.1em;
   max-width: 120px;

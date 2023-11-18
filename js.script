@@ -5,7 +5,8 @@ window.addEventListener("scroll",function(){
   })
 
 /*--- Sticky Nav---*/
-  /*--- Hamburger Nav---*/
+
+/*--- Hamburger Nav---*/
   var navLinks2 = document.getElementById("navLinks2");
   function showMenu(){
     navLinks2.style.right = "0";}
@@ -13,7 +14,7 @@ window.addEventListener("scroll",function(){
     navLinks2.style.right = "-200px";}
 /*--- Hamburger Nav---*/
 
-/*--- Nav Keep---*/
+/*--- Nav Keep---*
 const nav = document.querySelector('.navbar')
 fetch('/navbar.html')
 .then(res=>res.text())
