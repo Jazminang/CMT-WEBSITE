@@ -188,3 +188,14 @@ p {
 .item2-2 p {
   color: #ffffff;
 }
+
+/*Brands*/
+table{
+  justify-content: center;
+}
+table img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
